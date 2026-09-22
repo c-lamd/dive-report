@@ -1,0 +1,84 @@
+# Spearo Brief spot list. Edit freely; main.py reads this every run.
+# Regulatory notes verified 2026-09-22 against CDFW Title 14 §632 fact sheets (v2 Sept 2022) and MPA pages.
+# Both OC SMCAs that touch our spots allow recreational finfish by spear or hook-and-line plus spiny lobster and
+# sea urchin, and ban all take from tidepools. Lobster everywhere: in season only (~early Oct to mid-Mar), by hand for
+# divers (T14 §29.90). No Newport Beach, OC Parks, San Clemente or State Parks ordinance against spearfishing was found.
+# LAGUNA BEACH IS NO-TAKE for 5.5 mi: Laguna Beach SMR (§632(b)(134)) from Abalone Point (33°33.22'N, S end of Crystal
+# Cove SP) to Aliso Creek (33°30.71'N), then Laguna Beach SMCA No-Take (§632(b)(135)) from Aliso Creek to 3rd Ave /
+# South Table Rock (33°30.05'N). Emerald Bay, Crescent Bay, Shaw's, Diver's Cove, Heisler, Main Beach, Woods Cove,
+# Victoria, Aliso, West St and Table Rock are all inside: do not add any of them.
+# South of 3rd Ave (1000 Steps, Three Arch Bay) is fishable Dana Point SMCA today; petition 2023-24MPA_AM to extend the
+# no-take to the Laguna city limit got a CDFW denial recommendation (Mar 2026), FGC action no earlier than Oct 2026.
+# Source: https://wildlife.ca.gov/Conservation/Marine/MPAs/Laguna-Beach
+dive_window: ["06:00", "10:00"]   # local; forecast pulled 05:00-11:00 around it
+
+spots:
+  - name: Calafia / Riviera
+    area: San Clemente
+    lat: 33.4090
+    lon: -117.6200
+    facing_deg: 225
+    bottom: [sand, mixed]
+    shelter: "Open SW-facing beach; no headland shelter. Riviera has cobble/low reef patches north of Calafia."
+    species: [halibut, calico]
+    regulatory: "Open water, not in any MPA: Orange County's southernmost MPA is the Dana Point SMCA, which ends at the Dana Point Harbor entrance ~6 mi NW, so statewide sport-fishing rules apply (https://www.mpacollaborative.org/oc/orange-county-marine-protected-area-information/)."
+    spearfishing_allowed: true
+    creek_mouth: false
+    buoy: "46224"
+    tide_station: "9410580"
+
+  - name: Salt Creek
+    area: Dana Point
+    lat: 33.4760
+    lon: -117.7220
+    facing_deg: 220
+    bottom: [sand, reef]
+    shelter: "Shadowed from S/SSW by the Dana Point headland; exposed to W/NW. Reef along the north end toward the point."
+    species: [calico, sheephead, halibut]
+    regulatory: "Inside Dana Point SMCA (T14 §632(b)(136)), which runs from 3rd Ave / South Table Rock in South Laguna (33°30.05'N) along Monarch Bay, Salt Creek and the Strand, around the headland to the Dana Point Harbor jetty (33°27.62'N 117°42.43'W): recreational finfish by spear or hook-and-line, spiny lobster and sea urchin allowed; no take from tidepools (https://wildlife.ca.gov/Conservation/Marine/MPAs/Dana-Point)."
+    spearfishing_allowed: true
+    creek_mouth: true   # Salt Creek outlet at the south end of the beach
+    buoy: "46224"
+    tide_station: "9410580"
+
+  - name: Doheny
+    area: Dana Point
+    lat: 33.4620
+    lon: -117.6870
+    facing_deg: 200
+    bottom: [sand, mixed]
+    shelter: "Partly sheltered from W/NW by Dana Point harbor jetty; open to S. San Juan Creek mouth = runoff and frequent bacteria warnings."
+    species: [halibut]
+    regulatory: "Not in an MPA: the Dana Point SMCA's east end is the Dana Point Harbor entrance (33°27.48'N 117°42.28'W), ~1 mi west of the beach, so Doheny and the San Juan Creek mouth are open water under statewide rules (https://wildlife.ca.gov/Conservation/Marine/MPAs/Dana-Point, https://www.parks.ca.gov/?page_id=27926)."
+    spearfishing_allowed: true
+    creek_mouth: true
+    buoy: "46224"
+    tide_station: "9410580"
+
+  - name: Crystal Cove (El Moro)
+    area: Newport Coast
+    lat: 33.5640
+    lon: -117.8350
+    facing_deg: 225
+    bottom: [reef, kelp, sand]
+    shelter: "Open SW-facing coast; reef fingers and kelp give some structure but little swell shadow."
+    species: [calico, sheephead, halibut, wsb]
+    regulatory: "Inside Crystal Cove SMCA (T14 §632(b)(133)), which runs from the rocks at the S end of Corona del Mar State Beach (33°35.37'N) to Abalone Point (33°33.22'N): recreational finfish by spear or hook-and-line, spiny lobster and sea urchin allowed; no take from tidepools; Abalone Point ~1.1 mi SE is the start of the no-take Laguna Beach SMR (https://wildlife.ca.gov/Conservation/Marine/MPAs/Crystal-Cove)."
+    spearfishing_allowed: true
+    creek_mouth: false
+    buoy: "46256"
+    tide_station: "9410580"
+
+  - name: Little Corona del Mar
+    area: Corona del Mar
+    lat: 33.5885
+    lon: -117.8700
+    facing_deg: 200
+    bottom: [reef, sand]
+    shelter: "Small cove; Arch Rock and reef break up W swell, open to S/SSW."
+    species: [calico, sheephead]
+    regulatory: "Inside Crystal Cove SMCA (T14 §632(b)(133)): its north line runs due south from the rocks at the S end of Corona del Mar State Beach (33°35.37'N 117°52.65'W), ~0.4 mi NW of the cove, so Little Corona, Arch Rock and the reef are inside; recreational finfish by spear or hook-and-line, spiny lobster and sea urchin allowed; no take from tidepools; the open water north of that line allows the same (https://wildlife.ca.gov/Conservation/Marine/MPAs/Crystal-Cove)."
+    spearfishing_allowed: true
+    creek_mouth: false
+    buoy: "46256"
+    tide_station: "9410580"

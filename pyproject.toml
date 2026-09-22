@@ -1,0 +1,13 @@
+[project]
+name = "spearo-brief"
+version = "0.1.0"
+description = "Daily 6 PM SMS with tomorrow-morning Orange County shore spearfishing conditions"
+requires-python = ">=3.12"
+dependencies = ["anthropic", "pydantic", "pyyaml", "beautifulsoup4"]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

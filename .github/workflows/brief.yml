@@ -1,0 +1,24 @@
+name: spearo-brief
+on:
+  schedule:
+    - cron: "0 1 * * *"   # 01:00 UTC = 6 PM PDT. During PST (Nov-Mar) this is 5 PM; switch to "0 2 * * *" if that matters.
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: spearo-brief   # a manual dispatch overlapping the cron must not double-send
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv run main.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMS_TO: ${{ secrets.SMS_TO }}
+      - run: |  # keep briefs/ in the repo so reruns are idempotent and history is reviewable
+          git config user.name spearo-bot && git config user.email spearo-bot@users.noreply.github.com
+          git add briefs && git commit -m "brief $(date -u +%F)" || exit 0
+          git push
