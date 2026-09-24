@@ -12,6 +12,7 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
+import rules
 from analyze import analyze
 from fetchers import beachcities, diveviz, marine, moon, ndbc, ocbeachinfo, spearfactor, tides
 from notify import format_sms, send_sms
@@ -52,9 +53,22 @@ def collect(cfg: dict, day: date) -> dict:
     return data
 
 
-def write_brief(day: date, data: dict, brief, sms: str) -> None:
+def run_analysis(data: dict, spots: list[dict], engine: str):
+    """engine: claude | rules | auto (claude when ANTHROPIC_API_KEY is set). Claude failures fall back to rules."""
+    if engine == "auto":
+        engine = "claude" if os.environ.get("ANTHROPIC_API_KEY") else "rules"
+    if engine == "claude":
+        try:
+            return analyze(data, spots), "claude"
+        except Exception as e:  # noqa: BLE001 - the brief must still go out
+            log.warning("Claude analysis failed (%s: %s); falling back to rules", type(e).__name__, e)
+            engine = "rules (claude failed)"
+    return rules.analyze(data, spots), engine
+
+
+def write_brief(day: date, data: dict, brief, sms: str, engine: str) -> None:
     BRIEFS.mkdir(exist_ok=True)
-    (BRIEFS / f"{day}.json").write_text(json.dumps({"data": data, "analysis": brief.model_dump()}, indent=1, default=str))
+    (BRIEFS / f"{day}.json").write_text(json.dumps({"engine": engine, "data": data, "analysis": brief.model_dump()}, indent=1, default=str))
     rows = "\n".join(
         f"| {s.spot} | {s.verdict} | ~{s.vis_estimate_ft} ft | {s.best_window or '-'} | {s.why} | {s.species_note or '-'} |"
         for s in brief.spots
@@ -73,7 +87,7 @@ def write_brief(day: date, data: dict, brief, sms: str) -> None:
 |---|---|---|---|---|---|
 {rows}
 
-Missing sources: {", ".join(data["missing"]) or "none"}. Raw inputs in `{day}.json`.
+Engine: {engine}. Missing sources: {", ".join(data["missing"]) or "none"}. Raw inputs in `{day}.json`.
 """)
 
 
@@ -83,6 +97,8 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true", help="everything except sending the SMS")
     ap.add_argument("--collect-only", action="store_true", help="fetch and print the data; no Claude call, no SMS")
     ap.add_argument("--force", action="store_true", help="rerun even if the brief for that day already exists")
+    ap.add_argument("--engine", choices=["auto", "claude", "rules"], default="auto",
+                    help="auto (default) = claude when ANTHROPIC_API_KEY is set, else the rules engine")
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
@@ -100,10 +116,10 @@ def main() -> None:
         print(json.dumps(data, indent=1, default=str))
         return
 
-    brief = analyze(data, cfg["spots"])
+    brief, engine = run_analysis(data, cfg["spots"], a.engine)
     sms = format_sms(brief, day)
-    write_brief(day, data, brief, sms)
-    print(f"--- SMS ({len(sms)} chars) ---\n{sms}\n--- wrote {BRIEFS / f'{day}.md'}")
+    write_brief(day, data, brief, sms, engine)
+    print(f"--- SMS ({len(sms)} chars, engine {engine}) ---\n{sms}\n--- wrote {BRIEFS / f'{day}.md'}")
     if a.dry_run:
         return
     send_sms(sms)

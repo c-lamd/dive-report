@@ -20,3 +20,4 @@ def test_parse_fixture():
     assert (first["wave_ft"], first["swell_ft"], first["swell_period_s"], first["swell_dir"]) == (2.756, 1.837, 12.05, 192)
     assert (first["wind_kn"], first["wind_dir"], first["gust_kn"]) == (3.5, 19, 3.9)
     assert sc["rain_72h_in"] == 0.0
+    assert sc["recent_swell_max"]["time"].startswith("2026-09-22") and sc["recent_swell_max"]["swell_ft"] > 0

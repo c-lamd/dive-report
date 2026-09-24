@@ -23,3 +23,4 @@ SendMessage orchestrator-1 when you finish or get stuck. Nobody commits; orchest
 | Integration: live --collect-only | orchestrator-1 | done | 7.6 s, only diveviz missing (dead since 2019); payload ~11k chars |
 | Integration: --dry-run (Claude) + real SMS | orchestrator-1 | blocked | needs ANTHROPIC_API_KEY, SMS_TO, SMTP_USER/PASS from user |
 | Review of analyze/notify/main | worker-1 | done | 13 findings sent to orchestrator-1; top 3: dry-run blocks the real send, top_pick mismatch -> SKIP text, no GSM-7 sanitizing  -> all 13 applied by orchestrator-1 |
+| rules.py: no-key deterministic analysis engine + auto fallback | orchestrator-1 | done | 158-agent 5-lens adversarial review: 48 confirmed findings applied, 3 refuted; 10 tests |

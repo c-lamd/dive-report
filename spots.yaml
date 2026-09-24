@@ -11,6 +11,8 @@
 # no-take to the Laguna city limit got a CDFW denial recommendation (Mar 2026), FGC action no earlier than Oct 2026.
 # Source: https://wildlife.ca.gov/Conservation/Marine/MPAs/Laguna-Beach
 dive_window: ["06:00", "10:00"]   # local; forecast pulled 05:00-11:00 around it
+# Per-spot optional fields read by rules.py: shadow_deg [from, to] = swell directions the shelter blocks;
+# wq_match = extra strings that identify the spot in OC water-quality postings (the name's parts always match).
 
 spots:
   - name: Calafia / Riviera
@@ -38,6 +40,7 @@ spots:
     regulatory: "Inside Dana Point SMCA (T14 §632(b)(136)), which runs from 3rd Ave / South Table Rock in South Laguna (33°30.05'N) along Monarch Bay, Salt Creek and the Strand, around the headland to the Dana Point Harbor jetty (33°27.62'N 117°42.43'W): recreational finfish by spear or hook-and-line, spiny lobster and sea urchin allowed; no take from tidepools (https://wildlife.ca.gov/Conservation/Marine/MPAs/Dana-Point)."
     spearfishing_allowed: true
     creek_mouth: true   # Salt Creek outlet at the south end of the beach
+    shadow_deg: [165, 215]
     buoy: "46224"
     tide_station: "9410580"
 
@@ -49,6 +52,8 @@ spots:
     bottom: [sand, mixed]
     shelter: "Partly sheltered from W/NW by Dana Point harbor jetty; open to S. San Juan Creek mouth = runoff and frequent bacteria warnings."
     species: [halibut]
+    shadow_deg: [250, 330]
+    wq_match: ["San Juan Creek", "Doheny"]
     regulatory: "Not in an MPA: the Dana Point SMCA's east end is the Dana Point Harbor entrance (33°27.48'N 117°42.28'W), ~1 mi west of the beach, so Doheny and the San Juan Creek mouth are open water under statewide rules (https://wildlife.ca.gov/Conservation/Marine/MPAs/Dana-Point, https://www.parks.ca.gov/?page_id=27926)."
     spearfishing_allowed: true
     creek_mouth: true
@@ -77,6 +82,8 @@ spots:
     bottom: [reef, sand]
     shelter: "Small cove; Arch Rock and reef break up W swell, open to S/SSW."
     species: [calico, sheephead]
+    shadow_deg: [255, 290]
+    wq_match: ["Corona del Mar", "Little Corona"]
     regulatory: "Inside Crystal Cove SMCA (T14 §632(b)(133)): its north line runs due south from the rocks at the S end of Corona del Mar State Beach (33°35.37'N 117°52.65'W), ~0.4 mi NW of the cove, so Little Corona, Arch Rock and the reef are inside; recreational finfish by spear or hook-and-line, spiny lobster and sea urchin allowed; no take from tidepools; the open water north of that line allows the same (https://wildlife.ca.gov/Conservation/Marine/MPAs/Crystal-Cove)."
     spearfishing_allowed: true
     creek_mouth: false

@@ -18,7 +18,7 @@ AIR = {"wind_kn": "wind_speed_10m", "wind_dir": "wind_direction_10m", "gust_kn":
 def fetch(spots, day):
     coords = {"latitude": ",".join(str(s["lat"]) for s in spots),
               "longitude": ",".join(str(s["lon"]) for s in spots), "timezone": TZ, "forecast_days": 7}  # --day up to a week out
-    sea = get(MARINE, {**coords, "hourly": ",".join(SEA.values()), "length_unit": "imperial"})
+    sea = get(MARINE, {**coords, "hourly": ",".join(SEA.values()), "length_unit": "imperial", "past_days": 2})
     air = get(WX, {**coords, "hourly": ",".join(AIR.values()), "daily": "precipitation_sum", "past_days": 3,
                    "wind_speed_unit": "kn", "precipitation_unit": "inch"})
     return parse(json.loads(sea), json.loads(air), spots, day)
@@ -33,8 +33,13 @@ def parse(sea, air, spots, day):
         sh, ah = s["hourly"], a["hourly"]
         at = {t: i for i, t in enumerate(ah["time"])}
         hours = [{"time": t, **{k: sh[v][i] for k, v in SEA.items()}, **{k: ah[v][at[t]] for k, v in AIR.items()}}
-                 for i, t in enumerate(sh["time"]) if t[:10] == day.isoformat() and WINDOW[0] <= t[11:] <= WINDOW[1]]
+                 for i, t in enumerate(sh["time"]) if t[:10] == day.isoformat() and WINDOW[0] <= t[11:] <= WINDOW[1] and t in at]
+        # biggest swell (ft x s) in the fetched hours before `day`: a groundswell that hit yesterday still matters tomorrow
+        past = [{"time": t, "swell_ft": sh["swell_wave_height"][i], "swell_period_s": sh["swell_wave_period"][i],
+                 "swell_dir": sh["swell_wave_direction"][i]} for i, t in enumerate(sh["time"])
+                if t[:10] < day.isoformat() and None not in (sh["swell_wave_height"][i], sh["swell_wave_period"][i])]
+        recent = max(past, key=lambda h: h["swell_ft"] * h["swell_period_s"], default=None)
         # the three calendar days before `day`: with day = tomorrow that is d-2, d-1 and today
         rain = [p or 0 for t, p in zip(a["daily"]["time"], a["daily"]["precipitation_sum"]) if t < day.isoformat()]
-        out[spot["name"]] = {"hours": hours, "rain_72h_in": round(sum(rain[-3:]), 2)}
+        out[spot["name"]] = {"hours": hours, "rain_72h_in": round(sum(rain[-3:]), 2), "recent_swell_max": recent}
     return out

@@ -15,7 +15,8 @@ SIGNATURES
       Open-Meteo marine + forecast APIs (multi-coordinate: one call each). Keyed by spot name:
       {"<spot name>": {"hours": [{"time", "wave_ft", "wave_period_s", "swell_ft", "swell_period_s", "swell_dir",
                                   "wind_wave_ft", "wind_kn", "wind_dir", "gust_kn"}, ...],   # 05:00-11:00 local on `day`
-                       "rain_72h_in": float}}
+                       "rain_72h_in": float,
+                       "recent_swell_max": {"time", "swell_ft", "swell_period_s", "swell_dir"} | None}}  # past 48 h
       Notes: swell_wave_peak_period is null for this coast; wind_wave_ft is 0.0 near shore (use wind_kn);
       the swell/wind-sea partition is unstable at the Newport spots, so wave_period_s (total sea) is included.
   ndbc.fetch(buoy_id: str) -> dict | None
