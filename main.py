@@ -102,6 +102,10 @@ def main() -> None:
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
+    if not (a.dry_run or a.collect_only):
+        missing = [k for k in ("SMS_TO", "SMTP_USER", "SMTP_PASS") if not os.environ.get(k)]
+        if missing:
+            ap.error(f"cannot send without {', '.join(missing)} (see .env.example); use --dry-run to skip sending")
     day = a.day or datetime.now(TZ).date() + timedelta(days=1)
     cfg = yaml.safe_load((ROOT / "spots.yaml").read_text())
     sent = BRIEFS / f"{day}.sent"  # written only after a successful send, so dry runs and failed sends never block the real one

@@ -1,0 +1,633 @@
+{
+ "engine": "rules",
+ "data": {
+  "target_date": "2026-09-25",
+  "weekday": "Friday",
+  "dive_window": [
+   "06:00",
+   "10:00"
+  ],
+  "generated_at": "2026-09-24T15:15-07:00",
+  "marine": {
+   "Calafia / Riviera": {
+    "hours": [
+     {
+      "time": "2026-09-25T05:00",
+      "wave_ft": 2.822,
+      "wave_period_s": 11.5,
+      "swell_ft": 2.559,
+      "swell_period_s": 10.45,
+      "swell_dir": 201,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.2,
+      "wind_dir": 27,
+      "gust_kn": 2.5
+     },
+     {
+      "time": "2026-09-25T06:00",
+      "wave_ft": 2.822,
+      "wave_period_s": 11.5,
+      "swell_ft": 2.625,
+      "swell_period_s": 10.4,
+      "swell_dir": 201,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 3.1,
+      "wind_dir": 30,
+      "gust_kn": 3.9
+     },
+     {
+      "time": "2026-09-25T07:00",
+      "wave_ft": 2.887,
+      "wave_period_s": 11.55,
+      "swell_ft": 2.625,
+      "swell_period_s": 10.35,
+      "swell_dir": 202,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 3.4,
+      "wind_dir": 24,
+      "gust_kn": 4.3
+     },
+     {
+      "time": "2026-09-25T08:00",
+      "wave_ft": 2.887,
+      "wave_period_s": 11.55,
+      "swell_ft": 2.69,
+      "swell_period_s": 10.3,
+      "swell_dir": 202,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 1.9,
+      "wind_dir": 360,
+      "gust_kn": 2.7
+     },
+     {
+      "time": "2026-09-25T09:00",
+      "wave_ft": 2.887,
+      "wave_period_s": 11.55,
+      "swell_ft": 2.69,
+      "swell_period_s": 10.3,
+      "swell_dir": 202,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 3.0,
+      "wind_dir": 320,
+      "gust_kn": 3.7
+     },
+     {
+      "time": "2026-09-25T10:00",
+      "wave_ft": 2.953,
+      "wave_period_s": 11.6,
+      "swell_ft": 2.756,
+      "swell_period_s": 10.25,
+      "swell_dir": 202,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 3.8,
+      "wind_dir": 291,
+      "gust_kn": 3.9
+     },
+     {
+      "time": "2026-09-25T11:00",
+      "wave_ft": 2.953,
+      "wave_period_s": 11.6,
+      "swell_ft": 2.756,
+      "swell_period_s": 10.25,
+      "swell_dir": 202,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 5.1,
+      "wind_dir": 272,
+      "gust_kn": 5.6
+     }
+    ],
+    "rain_72h_in": 0,
+    "recent_swell_max": {
+     "time": "2026-09-22T09:00",
+     "swell_ft": 2.165,
+     "swell_period_s": 13.25,
+     "swell_dir": 198
+    }
+   },
+   "Salt Creek": {
+    "hours": [
+     {
+      "time": "2026-09-25T05:00",
+      "wave_ft": 2.69,
+      "wave_period_s": 11.6,
+      "swell_ft": 2.362,
+      "swell_period_s": 10.5,
+      "swell_dir": 198,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 1.9,
+      "wind_dir": 360,
+      "gust_kn": 2.7
+     },
+     {
+      "time": "2026-09-25T06:00",
+      "wave_ft": 2.69,
+      "wave_period_s": 11.65,
+      "swell_ft": 2.428,
+      "swell_period_s": 10.45,
+      "swell_dir": 198,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.7,
+      "wind_dir": 360,
+      "gust_kn": 3.7
+     },
+     {
+      "time": "2026-09-25T07:00",
+      "wave_ft": 2.756,
+      "wave_period_s": 11.65,
+      "swell_ft": 2.428,
+      "swell_period_s": 10.4,
+      "swell_dir": 199,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.4,
+      "wind_dir": 14,
+      "gust_kn": 3.3
+     },
+     {
+      "time": "2026-09-25T08:00",
+      "wave_ft": 2.756,
+      "wave_period_s": 11.65,
+      "swell_ft": 2.493,
+      "swell_period_s": 10.35,
+      "swell_dir": 199,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.3,
+      "wind_dir": 312,
+      "gust_kn": 2.7
+     },
+     {
+      "time": "2026-09-25T09:00",
+      "wave_ft": 2.756,
+      "wave_period_s": 11.65,
+      "swell_ft": 2.559,
+      "swell_period_s": 10.3,
+      "swell_dir": 199,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.3,
+      "wind_dir": 318,
+      "gust_kn": 3.1
+     },
+     {
+      "time": "2026-09-25T10:00",
+      "wave_ft": 2.822,
+      "wave_period_s": 11.6,
+      "swell_ft": 2.559,
+      "swell_period_s": 10.25,
+      "swell_dir": 200,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 3.2,
+      "wind_dir": 303,
+      "gust_kn": 3.7
+     },
+     {
+      "time": "2026-09-25T11:00",
+      "wave_ft": 2.822,
+      "wave_period_s": 11.6,
+      "swell_ft": 2.625,
+      "swell_period_s": 10.2,
+      "swell_dir": 200,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 5.1,
+      "wind_dir": 281,
+      "gust_kn": 5.6
+     }
+    ],
+    "rain_72h_in": 0,
+    "recent_swell_max": {
+     "time": "2026-09-22T09:00",
+     "swell_ft": 2.1,
+     "swell_period_s": 12.95,
+     "swell_dir": 195
+    }
+   },
+   "Doheny": {
+    "hours": [
+     {
+      "time": "2026-09-25T05:00",
+      "wave_ft": 2.822,
+      "wave_period_s": 11.5,
+      "swell_ft": 2.559,
+      "swell_period_s": 10.45,
+      "swell_dir": 199,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 1.8,
+      "wind_dir": 13,
+      "gust_kn": 2.5
+     },
+     {
+      "time": "2026-09-25T06:00",
+      "wave_ft": 2.822,
+      "wave_period_s": 11.5,
+      "swell_ft": 2.559,
+      "swell_period_s": 10.4,
+      "swell_dir": 199,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.8,
+      "wind_dir": 16,
+      "gust_kn": 3.7
+     },
+     {
+      "time": "2026-09-25T07:00",
+      "wave_ft": 2.887,
+      "wave_period_s": 11.55,
+      "swell_ft": 2.625,
+      "swell_period_s": 10.35,
+      "swell_dir": 200,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.7,
+      "wind_dir": 21,
+      "gust_kn": 3.3
+     },
+     {
+      "time": "2026-09-25T08:00",
+      "wave_ft": 2.887,
+      "wave_period_s": 11.55,
+      "swell_ft": 2.625,
+      "swell_period_s": 10.3,
+      "swell_dir": 200,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 1.8,
+      "wind_dir": 347,
+      "gust_kn": 2.5
+     },
+     {
+      "time": "2026-09-25T09:00",
+      "wave_ft": 2.887,
+      "wave_period_s": 11.55,
+      "swell_ft": 2.69,
+      "swell_period_s": 10.3,
+      "swell_dir": 200,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.1,
+      "wind_dir": 319,
+      "gust_kn": 2.9
+     },
+     {
+      "time": "2026-09-25T10:00",
+      "wave_ft": 2.953,
+      "wave_period_s": 11.6,
+      "swell_ft": 2.69,
+      "swell_period_s": 10.25,
+      "swell_dir": 201,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.3,
+      "wind_dir": 270,
+      "gust_kn": 2.7
+     },
+     {
+      "time": "2026-09-25T11:00",
+      "wave_ft": 2.953,
+      "wave_period_s": 11.6,
+      "swell_ft": 2.756,
+      "swell_period_s": 10.25,
+      "swell_dir": 201,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 4.9,
+      "wind_dir": 254,
+      "gust_kn": 5.2
+     }
+    ],
+    "rain_72h_in": 0,
+    "recent_swell_max": {
+     "time": "2026-09-22T09:00",
+     "swell_ft": 2.165,
+     "swell_period_s": 13.15,
+     "swell_dir": 196
+    }
+   },
+   "Crystal Cove (El Moro)": {
+    "hours": [
+     {
+      "time": "2026-09-25T05:00",
+      "wave_ft": 2.625,
+      "wave_period_s": 11.4,
+      "swell_ft": 2.297,
+      "swell_period_s": 10.5,
+      "swell_dir": 196,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.6,
+      "wind_dir": 306,
+      "gust_kn": 3.9
+     },
+     {
+      "time": "2026-09-25T06:00",
+      "wave_ft": 2.625,
+      "wave_period_s": 11.45,
+      "swell_ft": 2.297,
+      "swell_period_s": 10.5,
+      "swell_dir": 196,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 3.0,
+      "wind_dir": 315,
+      "gust_kn": 3.9
+     },
+     {
+      "time": "2026-09-25T07:00",
+      "wave_ft": 2.69,
+      "wave_period_s": 11.45,
+      "swell_ft": 2.362,
+      "swell_period_s": 10.4,
+      "swell_dir": 197,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.3,
+      "wind_dir": 360,
+      "gust_kn": 2.9
+     },
+     {
+      "time": "2026-09-25T08:00",
+      "wave_ft": 2.69,
+      "wave_period_s": 11.45,
+      "swell_ft": 2.362,
+      "swell_period_s": 10.35,
+      "swell_dir": 197,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 1.9,
+      "wind_dir": 360,
+      "gust_kn": 2.1
+     },
+     {
+      "time": "2026-09-25T09:00",
+      "wave_ft": 2.69,
+      "wave_period_s": 11.45,
+      "swell_ft": 2.362,
+      "swell_period_s": 10.3,
+      "swell_dir": 197,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.3,
+      "wind_dir": 329,
+      "gust_kn": 2.7
+     },
+     {
+      "time": "2026-09-25T10:00",
+      "wave_ft": 2.69,
+      "wave_period_s": 11.4,
+      "swell_ft": 2.362,
+      "swell_period_s": 10.25,
+      "swell_dir": 197,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 3.5,
+      "wind_dir": 276,
+      "gust_kn": 3.5
+     },
+     {
+      "time": "2026-09-25T11:00",
+      "wave_ft": 2.69,
+      "wave_period_s": 11.4,
+      "swell_ft": 2.362,
+      "swell_period_s": 10.2,
+      "swell_dir": 197,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 6.5,
+      "wind_dir": 263,
+      "gust_kn": 6.4
+     }
+    ],
+    "rain_72h_in": 0,
+    "recent_swell_max": {
+     "time": "2026-09-22T10:00",
+     "swell_ft": 1.903,
+     "swell_period_s": 13.25,
+     "swell_dir": 192
+    }
+   },
+   "Little Corona del Mar": {
+    "hours": [
+     {
+      "time": "2026-09-25T05:00",
+      "wave_ft": 2.493,
+      "wave_period_s": 11.35,
+      "swell_ft": 2.1,
+      "swell_period_s": 10.65,
+      "swell_dir": 195,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.7,
+      "wind_dir": 300,
+      "gust_kn": 3.7
+     },
+     {
+      "time": "2026-09-25T06:00",
+      "wave_ft": 2.493,
+      "wave_period_s": 11.4,
+      "swell_ft": 2.1,
+      "swell_period_s": 10.6,
+      "swell_dir": 195,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.5,
+      "wind_dir": 315,
+      "gust_kn": 3.3
+     },
+     {
+      "time": "2026-09-25T07:00",
+      "wave_ft": 2.493,
+      "wave_period_s": 11.45,
+      "swell_ft": 2.165,
+      "swell_period_s": 10.5,
+      "swell_dir": 196,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 2.3,
+      "wind_dir": 355,
+      "gust_kn": 2.9
+     },
+     {
+      "time": "2026-09-25T08:00",
+      "wave_ft": 2.493,
+      "wave_period_s": 11.45,
+      "swell_ft": 2.165,
+      "swell_period_s": 10.4,
+      "swell_dir": 196,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 1.5,
+      "wind_dir": 337,
+      "gust_kn": 1.9
+     },
+     {
+      "time": "2026-09-25T09:00",
+      "wave_ft": 2.493,
+      "wave_period_s": 11.45,
+      "swell_ft": 2.165,
+      "swell_period_s": 10.35,
+      "swell_dir": 196,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 1.5,
+      "wind_dir": 310,
+      "gust_kn": 1.9
+     },
+     {
+      "time": "2026-09-25T10:00",
+      "wave_ft": 2.559,
+      "wave_period_s": 11.45,
+      "swell_ft": 2.231,
+      "swell_period_s": 10.35,
+      "swell_dir": 197,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 3.5,
+      "wind_dir": 273,
+      "gust_kn": 3.5
+     },
+     {
+      "time": "2026-09-25T11:00",
+      "wave_ft": 2.559,
+      "wave_period_s": 11.45,
+      "swell_ft": 2.231,
+      "swell_period_s": 10.3,
+      "swell_dir": 197,
+      "wind_wave_ft": 0.0,
+      "wind_kn": 5.7,
+      "wind_dir": 260,
+      "gust_kn": 6.0
+     }
+    ],
+    "rain_72h_in": 0,
+    "recent_swell_max": {
+     "time": "2026-09-22T09:00",
+     "swell_ft": 1.837,
+     "swell_period_s": 12.8,
+     "swell_dir": 193
+    }
+   }
+  },
+  "buoys": {
+   "46224": {
+    "buoy": "46224",
+    "time": "2026-09-24T14:56",
+    "wvht_ft": 2.6,
+    "swell_ft": 2.0,
+    "swell_period_s": 14.3,
+    "swell_dir": "SSW",
+    "wind_wave_ft": 1.6,
+    "wind_wave_period_s": 9.1,
+    "wind_wave_dir": "SW",
+    "apd_s": 8.6,
+    "mwd_deg": 212.0,
+    "steepness": null
+   },
+   "46256": {
+    "buoy": "46256",
+    "time": "2026-09-24T14:56",
+    "wvht_ft": 2.0,
+    "swell_ft": 1.3,
+    "swell_period_s": 15.4,
+    "swell_dir": "SSW",
+    "wind_wave_ft": 1.3,
+    "wind_wave_period_s": 9.9,
+    "wind_wave_dir": "SSW",
+    "apd_s": 8.0,
+    "mwd_deg": 197.0,
+    "steepness": null
+   }
+  },
+  "tides": {
+   "9410580": {
+    "station": "9410580",
+    "events": [
+     {
+      "time": "2026-09-25T02:55",
+      "height_ft": 0.223,
+      "type": "L"
+     },
+     {
+      "time": "2026-09-25T09:07",
+      "height_ft": 5.212,
+      "type": "H"
+     },
+     {
+      "time": "2026-09-25T15:03",
+      "height_ft": 0.864,
+      "type": "L"
+     },
+     {
+      "time": "2026-09-25T21:07",
+      "height_ft": 5.453,
+      "type": "H"
+     }
+    ],
+    "range_ft": 5.23
+   }
+  },
+  "moon": {
+   "phase": "full",
+   "illumination": 0.99,
+   "spring_neap": "spring",
+   "days_from_syzygy": 1.0,
+   "grunion_run_night_before": false
+  },
+  "vis_reports": {
+   "spearfactor": {
+    "source": "spearfactor",
+    "url": "https://spearfactor-api.whitmanbret.workers.dev/reports/public?region=orange&days=3&limit=20",
+    "fetched_at": "2026-09-24T15:15",
+    "report_date": "2026-09-23",
+    "text": "09/23 19:59 Laguna Beach (Shaw's / Diver's Cove): 11 ft vis (model said 13-18 ft) - 9/23: calm entry, overall not great, clear pockets shallow north side; yellowtail near shore. Qualitative/borderline (no hard number).\n09/21 15:30 Crescent Bay: 13 ft vis (model said 10-15 ft (deep 15-24)) - 9/21 3:30pm: 10-20 milky, even 5 in spots. MATCH (spans headline+deep; 5 = worst pocket).\n09/21 15:30 Laguna Beach (Shaw's / Diver's Cove): 20 ft vis (model said 13-18 ft (deep 15-24)) - 9/21: ~20 ft. MATCH via deep."
+   },
+   "diveviz": null,
+   "beachcities": {
+    "source": "beachcities",
+    "url": "https://beachcitiesscuba.com/pages/current-conditions",
+    "fetched_at": "2026-09-24T15:15",
+    "report_date": "2026-09-24",
+    "text": "Location: Shaw\u2019s Cove, Laguna Beach, California / LOBSTER Session is Coming / Laguna Sea Sports / Beach Cities Scuba / Open 10 am - 6 pm / Mon-Sun / Riviera Boat has spots available for Saturday&Sunday / October 3 & 4 open / October 10 & 11 open / 2 Tank Dives, $179.00\nDate: LifeGuard has a Green(GO Diving) Flag up / Thursday / Sep 24, 2026\nLast Report Time: 9 am; Waves: 2-3ft; Surge: Light\nVisibility: 10ft +; Temperature: Water 78 \u00b0F-- Air 80 \u00b0F"
+   }
+  },
+  "water_quality": {
+   "closures": [],
+   "warnings": [
+    "Huntington State Beach \u2013 150 feet upcoast and 150 feet downcoast of Brookhurst Street (posted on 9/24/2026)"
+   ],
+   "advisories": [],
+   "text": "CLOSURES: none in effect\nWARNINGS: Huntington State Beach \u2013 150 feet upcoast and 150 feet downcoast of Brookhurst Street (posted on 9/24/2026)\nADVISORIES: none in effect"
+  },
+  "missing": [
+   "vis_reports.diveviz"
+  ]
+ },
+ "analysis": {
+  "spots": [
+   {
+    "spot": "Calafia / Riviera",
+    "vis_estimate_ft": 4,
+    "verdict": "skip",
+    "best_window": "",
+    "why": "SSW 2.7ft@10s, spring, mid-flood 53%",
+    "tag": "S swell",
+    "species_note": ""
+   },
+   {
+    "spot": "Salt Creek",
+    "vis_estimate_ft": 10,
+    "verdict": "go",
+    "best_window": "7:52-10:00, slack high 9:07",
+    "why": "SSW 2.5ft@10s shadowed, spring, mid-flood 53%, eyes-on 10ft",
+    "tag": "clean",
+    "species_note": "Calico/sheephead on the reef edge"
+   },
+   {
+    "spot": "Doheny",
+    "vis_estimate_ft": 4,
+    "verdict": "skip",
+    "best_window": "",
+    "why": "SSW 2.6ft@10s, spring, mid-flood 53%",
+    "tag": "S swell",
+    "species_note": ""
+   },
+   {
+    "spot": "Crystal Cove (El Moro)",
+    "vis_estimate_ft": 8,
+    "verdict": "marginal",
+    "best_window": "7:52-10:00, slack high 9:07",
+    "why": "SSW 2.3ft@10s, spring, mid-flood 53%, eyes-on 10ft",
+    "tag": "S swell",
+    "species_note": ""
+   },
+   {
+    "spot": "Little Corona del Mar",
+    "vis_estimate_ft": 8,
+    "verdict": "marginal",
+    "best_window": "7:52-10:00, slack high 9:07",
+    "why": "SSW 2.2ft@10s, spring, mid-flood 53%, eyes-on 10ft",
+    "tag": "S swell",
+    "species_note": ""
+   }
+  ],
+  "top_pick": "Salt Creek",
+  "one_line_summary": "Salt Creek is the drive (10ft). 1 go, 2 marginal, 2 skip."
+ }
+}
